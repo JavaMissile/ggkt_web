@@ -221,7 +221,7 @@ export default {
     },
 
     add() {
-      this.$router.push({ path: '/vod/course/info' })
+      this.$router.push({ path: '/vodcourse/course/info' })
     },
 
     // 每页记录数改变，size：回调参数，表示当前选中的“每页条数”
@@ -246,5 +246,31 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.tinymce-container {
+  position: relative;
+  line-height: normal;
+}
+.cover-uploader .avatar-uploader-icon {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  font-size: 28px;
+  color: #8c939d;
+  width: 640px;
+  height: 357px;
+  line-height: 357px;
+  text-align: center;
+}
+.cover-uploader .avatar-uploader-icon:hover {
+  border-color: #409EFF;
+}
+.cover-uploader img {
+  width: 640px;
+  height: 357px;
+  display: block;
+}
 </style>

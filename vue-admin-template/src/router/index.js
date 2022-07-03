@@ -99,10 +99,10 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/vod',
+    path: '/vodcourse',
     component: Layout,
-    redirect: '/vod/course/list',
-    name: 'Vod',
+    redirect: '/vodcourse/course/list',
+    name: 'vodcourse',
     meta: {
       title: '点播管理',
       icon: 'el-icon-bank-card'
@@ -113,29 +113,29 @@ export const constantRoutes = [
         path: 'course/list',
         name: 'CourseList',
         component: () => import('@/views/vod/course/list'),
-        meta: { title: '课程列表' }
+        meta: { title: '课程列表',icon:'table' }
       },
-      // {
-      //   path: 'course/info',
-      //   name: 'CourseInfo',
-      //   component: () => import('@/views/vod/course/form'),
-      //   meta: { title: '发布课程' },
-      //   hidden: true
-      // },
-      // {
-      //   path: 'course/info/:id',
-      //   name: 'CourseInfoEdit',
-      //   component: () => import('@/views/vod/course/form'),
-      //   meta: { title: '编辑课程' },
-      //   hidden: true
-      // },
-      // {
-      //   path: 'course/chapter/:id',
-      //   name: 'CourseChapterEdit',
-      //   component: () => import('@/views/vod/course/form'),
-      //   meta: { title: '编辑大纲' },
-      //   hidden: true
-      // },
+      {
+        path: 'course/info',
+        name: 'CourseInfo',
+        component: () => import('@/views/vod/course/form'),
+        meta: { title: '发布课程' },
+        hidden: true
+      },
+      {
+        path: 'course/info/:id',
+        name: 'CourseInfoEdit',
+        component: () => import('@/views/vod/course/form'),
+        meta: { title: '编辑课程' },
+        hidden: true
+      },
+      {
+        path: 'course/chapter/:id',
+        name: 'CourseChapterEdit',
+        component: () => import('@/views/vod/course/form'),
+        meta: { title: '编辑大纲' },
+        hidden: true
+      },
       // {
       //   path: 'course/chart/:id',
       //   name: 'CourseChart',

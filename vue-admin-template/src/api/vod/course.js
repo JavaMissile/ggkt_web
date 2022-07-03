@@ -11,4 +11,25 @@ export default {
             params: searchObj
         })
     },
+    saveCourseInfo(courseInfo) {
+        return request({
+            url: `${api_name}/saveCourse`,
+            method: 'post',
+            data: courseInfo
+        })
+    },
+    getCourseInfoById(id) {
+        return request({
+            url: `${api_name}/get/${id}`,
+            method: 'get'
+        })
+    },
+    //修改课程信息
+    updateCourseInfoById(courseInfo) {
+        return request({
+            url: `${api_name}/update`,
+            method: 'post',
+            data: courseInfo
+        })
+    },
 }

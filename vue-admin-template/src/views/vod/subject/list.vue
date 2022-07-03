@@ -10,7 +10,7 @@
       <el-button type="text" @click="importData"
         ><i class="fa fa-plus" /> 导入</el-button
       >
-<el-button type="primary" @click="open">Test</el-button>
+<!-- <el-button type="primary" @click="open">Test</el-button> -->
       <div>
         <el-dialog
           title="导入"
@@ -87,16 +87,16 @@ export default {
       this.dialogImportVisible = false;
       this.getSubList(0);
     },
-    open(){
-this.$alert("<strong>这是 <i>HTML</i> 片段</strong>", "HTML 片段", {
-        dangerouslyUseHTMLString: true,
-        center: true,
-        sheoCancelButton: true,
-        cancelButtonText: "支付遇见问题",
-        confirmButtonText: "已支付成功",
-        showClose: false,
-      });
-    }
+    // open(){
+    //   this.$alert("<strong>这是 <i>HTML</i> 片段</strong>", "HTML 片段", {
+    //     dangerouslyUseHTMLString: true,
+    //     center: true,
+    //     sheoCancelButton: true,
+    //     cancelButtonText: "支付遇见问题",
+    //     confirmButtonText: "已支付成功",
+    //     showClose: false,
+    //   });
+    // }
   },
   created() {
     this.getSubList(0);
