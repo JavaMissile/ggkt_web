@@ -33,7 +33,7 @@ export default {
       this.dialogVisible = true
       if (chapterId) {
         chapterApi.getById(chapterId).then(response => {
-          this.chapter = response.data.item
+          this.chapter = response.data
         })
       }
     },
