@@ -136,13 +136,29 @@ export const constantRoutes = [
         meta: { title: '编辑大纲' },
         hidden: true
       },
-      // {
-      //   path: 'course/chart/:id',
-      //   name: 'CourseChart',
-      //   component: () => import('@/views/vod/course/chart'),
-      //   meta: { title: '课程统计' },
-      //   hidden: true
-      // }
+      {
+        path: 'course/chart/:id',
+        name: 'CourseChart',
+        component: () => import('@/views/vod/course/chart'),
+        meta: { title: '课程统计' },
+        hidden: true
+      }
+    ]
+  },
+  {
+    path: '/order',
+    component: Layout,
+    redirect: '/order/orderInfo/list',
+    name: 'Order',
+    meta: { title: '订单管理', icon: 'el-icon-truck' },
+    alwaysShow: true,
+    children: [
+      {
+        path: 'orderInfo/list',
+        name: 'OrderInfo',
+        component: () => import('@/views/order/list'),
+        meta: { title: '订单列表' }
+      }
     ]
   },
   {
